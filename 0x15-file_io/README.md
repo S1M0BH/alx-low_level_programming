@@ -20,7 +20,7 @@
   * The parameter `letters` is the number of letters the function should read and print.
   * If the file is `NULL` or cannot be opened or read - returns `0`.
   * If the `write` call fails or does not write the expected number of bytes - returns `0`.
-  * Otherwise - returns the aetual number of bytes the function can read and print.
+  * Otherwise - returns the actual number of bytes the function can read and print.
 
 * `1. Under the snow`
   * [1-create_file.c](./1-create_file.c): C function that creates a file.
@@ -41,7 +41,7 @@
   * The function does not create the file if it does not exist.
   * If `text_content` is `NULL`, nothing is added to the file.
   * If the function fails or `filename` is `NULL` - returns `-1`.
-  * If the file does not exist or the user laeks write permissions on the file - returns `-1`.
+  * If the file does not exist or the user lacks write permissions on the file - returns `-1`.
   * Otherwise - returns `1`.
 
 * `3. cp`
@@ -52,7 +52,7 @@
   * If the file already exists, the existing permissions are not changed.
   * If the number of arguments is incorrect, the function prints `Usage: cp file_from
   file_to`, followed by a new line on the `POSIX` standard error and exits with code `97`.
-  * If `file_from` does not exist or the user laeks read permissions on it,
+  * If `file_from` does not exist or the user lacks read permissions on it,
   the function prints `Error: Can't read from file NAME_OF_THE_FILE`, followed by a new
   line and exits with code `98`.
     * Where `NAME_OF_THE_FILE` is the first argument passed to the program.
@@ -60,9 +60,9 @@
   `Error: Can't write to NAME_OF_THE_FILE`, followed by a new line and exits with code `99`.
     * Where `NAME_OF_THE_FILE` is the second argument passed to the program.
   * If the user cannot close a file descriptor, the function prints `Error:
-  Can't close f f_VALUE`, followed by a new line on the `POSIX` standard
+  Can't close fd FD_VALUE`, followed by a new line on the `POSIX` standard
   error and exits with code `100`.
-    * Where `f_VALUE` is the value of the file descriptor.
+    * Where `FD_VALUE` is the value of the file descriptor.
 
 * `4. elf`
   * [100-elf_header.c](./100-elf_header.c): C program that displays the information contained
