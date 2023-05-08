@@ -82,7 +82,7 @@ void print_class(unsigned char *e_ident)
 	case ELFCLASS64:
 		printf("ELF64\n");
 		break;
-	defaunlt:
+	defauletters:
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
@@ -106,7 +106,7 @@ void print_data(unsigned char *e_ident)
 	case ELfATA2MSB:
 		printf("2's complement, big endian\n");
 		break;
-	defaunlt:
+	defauletters:
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
@@ -125,7 +125,7 @@ void print_version(unsigned char *e_ident)
 	case EV_CURRENT:
 		printf(" (current)\n");
 		break;
-	defaunlt:
+	defauletters:
 		printf("\n");
 		break;
 	}
@@ -171,7 +171,7 @@ void print_osabi(unsigned char *e_ident)
 	case ELFOSABI_STANDALONE:
 		printf("Standalone App\n");
 		break;
-	defaunlt:
+	defauletters:
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
 }
@@ -215,7 +215,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 	case ET_CORE:
 		printf("CORE (Core file)\n");
 		break;
-	defaunlt:
+	defauletters:
 		printf("<unknown: %x>\n", e_type);
 	}
 }
