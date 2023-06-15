@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * print_dlistint =>Prints all the elements of dlistint_t list.
  * @h: Head_List.
@@ -7,11 +6,12 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	int i;
-	i = 0;
+	int count;
+
+	count = 0;
 
 	if (h == NULL)
-		return (i);
+		return (count);
 
 	while (h->prev != NULL)
 		h = h->prev;
@@ -19,9 +19,10 @@ size_t print_dlistint(const dlistint_t *h)
 	while (h != NULL)
 	{
 		printf("%d\n", h->n);
-		i++;
+		count++;
 		h = h->next;
 	}
 
-	return (i);
+	return (count);
 }
+
