@@ -1,6 +1,5 @@
 #ifndef LISTES_H
 #define LISTES_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +10,6 @@
  * @prev: points to the previous node.
  * @next: points to the next node.
  * Description : doubly linked list node structure.
- * 
  */
 
 typedef struct dlistint_s
