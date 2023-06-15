@@ -4,14 +4,17 @@
  * free_dlistint =>Frees a dlistint_t list.
  * @head: Head_List.
 */
-
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *a;
-	while (head != NULL)
+	dlistint_t *tmp;
+
+	if (head != NULL)
+		while (head->prev != NULL)
+			head = head->prev;
+
+	while ((tmp = head) != NULL)
 	{
-		a = head;
 		head = head->next;
-		free(a);
+		free(tmp);
 	}
 }

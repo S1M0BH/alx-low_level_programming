@@ -6,27 +6,32 @@
  * @n: Add_Number.
  * Return : New_Node.
 */
-
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *new, *a;
-	if (head == NULL)
-		return (NULL);
+	dlistint_t *h;
+	dlistint_t *new;
+
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
+
 	new->n = n;
-	new->prev = NULL;
 	new->next = NULL;
-	if (*head != NULL)
+
+	h = *head;
+
+	if (h != NULL)
 	{
-		a = *head;
-		while (a->next != NULL)
-			a = a->next;
-		a->next = new;
-		new->prev = a;
+		while (h->next != NULL)
+			h = h->next;
+		h->next = new;
 	}
 	else
+	{
 		*head = new;
+	}
+
+	new->prev = h;
+
 	return (new);
 }

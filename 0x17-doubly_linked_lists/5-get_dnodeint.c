@@ -6,19 +6,25 @@
  * @index: Index_Node.
  * Return : Node.
  */
-
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i;
-	dlistint_t *a;
+
 	if (head == NULL)
 		return (NULL);
-	a = head;
-	for (i = 0; i < index; i++)
+
+	while (head->prev != NULL)
+		head = head->prev;
+
+	i = 0;
+
+	while (head != NULL)
 	{
-		if (a == NULL)
-			return (NULL);
-		a = a->next;
+		if (i == index)
+			break;
+		head = head->next;
+		i++;
 	}
-	return (a);
+
+	return (head);
 }

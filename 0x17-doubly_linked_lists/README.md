@@ -1,1 +1,1 @@
-# C - Doubly linked lists
+# Solution to tasks on doubly linked list
