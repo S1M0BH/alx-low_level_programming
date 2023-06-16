@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * free_dlistint -> Frees a dlistint_t list:)
- * @head: Head List
+ * free_dlistint =>Frees a dlistint_t list.
+ * @head: Head_List.
 */
 
 void free_dlistint(dlistint_t *head)

@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index -> Deletes node at index a dlistint_t linked list
- * @head: Head List
- * @index: Index Node
- * Return: Depend Condition
+ * delete_dnodeint_at_index =>Deletes node at index a dlistint_t linked list.
+ * @head: Head_List.
+ * @index: Index_Node.
+ * Return : Depend Condition.
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
