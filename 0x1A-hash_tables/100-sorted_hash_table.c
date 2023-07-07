@@ -59,7 +59,8 @@ shash_node_t *make_shash_node(const char *key, const char *value)
 }
 
 /**
- * add_to_sorted_list ->> Adding a node to an ordered linked list (as per ASCII key).
+ * add_to_sorted_list ->> Adding a node to an ordered
+ * linked list (as per ASCII key).
  * @table: Classified hash table.
  * @node: The node to be added.
  */
